@@ -84,10 +84,10 @@ export default function fetchWeatherData(t, lang = 'en') {
         .then(weatherData => {
           // we only care about a bit of the data
           const weather = {};
-          weather.temp = weatherData.main.temp;
-          weather.wind = weatherData.wind.speed;
-          weather.conditions = weatherData.weather[0].id;
-          weather.icon = weatherData.weather[0].icon;
+          weather.temp = 22;  //weatherData.main.temp;
+          weather.wind = 12;  //weatherData.wind.speed;
+          weather.conditions = "00";  //weatherData.weather[0].id;
+          weather.icon = null;  //weatherData.weather[0].icon;
           cacheWeatherData(t, card.coordinates, weather);
           weatherRequests.delete(idCard);
           return weather;
